@@ -1,4 +1,5 @@
-#include "../Include/library.h"
+#include "library.h"
+#include <raylib-cpp/AudioDevice.hpp>
 
 #include <iostream>
 
