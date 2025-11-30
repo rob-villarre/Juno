@@ -19,7 +19,7 @@ namespace Juno
         m_LayerStack.PopLayer(layer);
     }
 
-    void Application::TransitionToLayerDeferred(Layer* oldLayer, std::unique_ptr<Layer> newLayer)
+    void Application::SwapLayersDeferred(Layer* oldLayer, std::unique_ptr<Layer> newLayer)
     {
         PopLayerDeferred(oldLayer);
         PushLayerDeferred(std::move(newLayer));
@@ -55,9 +55,6 @@ namespace Juno
     {
         while (!m_Window.ShouldClose())
         {
-            BeginDrawing();
-            ClearBackground(RAYWHITE);
-
             ProcessPendingLayers();
 
             for (const auto& layer : m_LayerStack)
@@ -65,6 +62,11 @@ namespace Juno
                 layer->OnUpdate();
             }
 
+            BeginDrawing();
+            for (const auto& layer : m_LayerStack)
+            {
+                layer->OnRender();
+            }
             EndDrawing();
         }
     }

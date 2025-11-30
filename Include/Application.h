@@ -33,11 +33,15 @@ namespace Juno
 
         void PushLayerDeferred(std::unique_ptr<Layer> layer);
         void PopLayerDeferred(Layer* layer);
-        void TransitionToLayerDeferred(Layer* oldLayer, std::unique_ptr<Layer> newLayer);
+        void SwapLayersDeferred(Layer* oldLayer, std::unique_ptr<Layer> newLayer);
 
         void ProcessPendingLayers();
 
         void Run();
+
+        [[nodiscard]] raylib::Window& GetWindow() { return m_Window; }
+        [[nodiscard]] const raylib::Window& GetWindow() const { return m_Window; }
+
     private:
         ApplicationSpecification m_Specification;
         raylib::Window m_Window;
