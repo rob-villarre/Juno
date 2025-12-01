@@ -55,11 +55,13 @@ namespace Juno
     {
         while (!m_Window.ShouldClose())
         {
+            const float deltaTime = m_Window.GetFrameTime();
+
             ProcessPendingLayers();
 
             for (const auto& layer : m_LayerStack)
             {
-                layer->OnUpdate();
+                layer->OnUpdate(deltaTime);
             }
 
             BeginDrawing();

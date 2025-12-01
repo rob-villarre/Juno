@@ -13,6 +13,8 @@ add_library(${PROJECT_NAME} STATIC
         Include/Layer.h
         Source/LayerStack.cpp
         Include/LayerStack.h
+        Include/IEntity.h
+        Include/Command.h
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)

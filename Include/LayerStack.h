@@ -1,5 +1,5 @@
-#ifndef ASTEROIDS_LAYERSTACK_H
-#define ASTEROIDS_LAYERSTACK_H
+#ifndef LAYERSTACK_H
+#define LAYERSTACK_H
 
 #include "Layer.h"
 
@@ -32,4 +32,4 @@ namespace Juno
 
 }
 
-#endif //ASTEROIDS_LAYERSTACK_H
+#endif //LAYERSTACK_H

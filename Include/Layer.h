@@ -1,8 +1,7 @@
-#ifndef ASTEROIDS_LAYER_H
-#define ASTEROIDS_LAYER_H
+#ifndef LAYER_H
+#define LAYER_H
 
 #include <string>
-#include <memory>
 
 namespace Juno
 {
@@ -14,7 +13,7 @@ namespace Juno
 
         virtual void OnAttach() {}
         virtual void OnDetach() {}
-        virtual void OnUpdate() {}
+        virtual void OnUpdate(float deltaTime) {}
         virtual void OnRender() {}
         // virtual void OnEvent() {}
 
@@ -24,4 +23,4 @@ namespace Juno
     };
 }
 
-#endif //ASTEROIDS_LAYER_H
+#endif //LAYER_H

@@ -1,5 +1,5 @@
-#ifndef ASTEROIDS_APPLICATION_H
-#define ASTEROIDS_APPLICATION_H
+#ifndef APPLICATION_H
+#define APPLICATION_H
 
 #include "raylib-cpp.hpp"
 #include "LayerStack.h"
@@ -51,4 +51,4 @@ namespace Juno
     };
 }
 
-#endif //ASTEROIDS_APPLICATION_H
+#endif //APPLICATION_H
