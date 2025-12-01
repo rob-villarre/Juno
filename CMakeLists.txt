@@ -15,6 +15,8 @@ add_library(${PROJECT_NAME} STATIC
         Include/LayerStack.h
         Include/IEntity.h
         Include/Command.h
+        Include/Component.h
+        Include/Collider.h
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
